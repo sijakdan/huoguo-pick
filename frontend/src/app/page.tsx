@@ -1,102 +1,119 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function MainPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-gray-200 max-w-[960px] mx-auto">
+      <header className="bg-red-500 w-full flex flex-col">
+        <div className="bg-amber-300 opacity-50 h-[100px] flex items-center">
+          <Link href="/" className="text-2xl font-bold">
+            LOGO
+          </Link>
+        </div>
+        <div className="bg-blue-300 opacity-50 h-[130px] w-screen ml-[calc(50%-50vw)] flex items-center">
+          <div className="max-w-[960px] mx-auto flex items-center justify-between gap-[20px]">
+            <div className="border-2 border-green-500 h-[50px] w-[470px]">
+              search1
+            </div>
+            <div className="border-2 border-green-500 w-[225px] h-[50px]">
+              search2
+            </div>
+            <div className="border-2 border-green-500 w-[225px] h-[50px]">
+              search3
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="bg-green-500 opacity-50 w-full mt-[40px] flex gap-[28px]">
+        <section className="border-2 border-blue-500 w-[552px]">
+          <div className="w-full mb-[8px]">
+            <div className="bg-yellow-500 opacity-50 h-[30px] flex items-center justify-between">
+              <span className="border-2 border-red-500">
+                <span>로고</span> 인기소스
+              </span>
+              <select className="border-2 border-red-500 h-full w-[77px]">
+                <option value="recent">최신순</option>
+                <option value="popular">인기순</option>
+              </select>
+            </div>
+            <p className="text-xs mt-[5px] mb-[10px]">
+              유명한 소스들을 모아서 볼 수 있어요!
+            </p>
+            <div className="border-1 border-neutral-300 w-full h-[1px]"></div>
+          </div>
+
+          <div className="w-full flex flex-col gap-[8px] h-fit">
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            <div className="border-2 border-red-500 h-[72px] w-full"></div>
+          </div>
+
+          <button className="bg-red-300 h-[40px] w-full mt-[20px]">
+            더 많은 인기소스 보러가기
+          </button>
+        </section>
+        <div className="w-[380px] flex flex-col gap-[28px]">
+          <section className="border-2 border-blue-500">
+            <div className="w-full mb-[8px]">
+              <div className="bg-yellow-500 opacity-50 h-[30px] flex items-center justify-between">
+                <span className="border-2 border-red-500">
+                  <span>로고</span> 랜덤소스
+                </span>
+                <select className="border-2 border-red-500 h-full w-[77px]">
+                  <option value="recent">최신순</option>
+                  <option value="popular">인기순</option>
+                </select>
+              </div>
+              <p className="text-xs mt-[5px] mb-[10px]">
+                유명한 소스들을 모아서 볼 수 있어요!
+              </p>
+              <div className="border-1 border-neutral-300 w-full h-[1px]"></div>
+            </div>
+
+            <div className="w-full flex flex-col gap-[8px] h-fit">
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            </div>
+          </section>
+          <section className="border-2 border-blue-500">
+            <div className="w-full mb-[8px]">
+              <div className="bg-yellow-500 opacity-50 h-[30px] flex items-center justify-between">
+                <span className="border-2 border-red-500">
+                  <span>로고</span> 추천소스
+                </span>
+                <select className="border-2 border-red-500 h-full w-[77px]">
+                  <option value="recent">최신순</option>
+                  <option value="popular">인기순</option>
+                </select>
+              </div>
+              <p className="text-xs mt-[5px] mb-[10px]">
+                유명한 소스들을 모아서 볼 수 있어요!
+              </p>
+              <div className="border-1 border-neutral-300 w-full h-[1px]"></div>
+            </div>
+
+            <div className="w-full flex flex-col gap-[8px] h-fit">
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+              <div className="border-2 border-red-500 h-[72px] w-full"></div>
+            </div>
+
+            <button className="bg-red-300 h-[40px] w-full mt-[20px]">
+              더 재미있는 소스 찾으러 가기
+            </button>
+          </section>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-neutral-300 h-[100px] w-screen ml-[calc(50%-50vw)] mt-[40px]">
+        <div className="flex items-center justify-center">TEST TEST TEST</div>
       </footer>
     </div>
   );
